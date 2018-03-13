@@ -173,6 +173,7 @@ var QrCodeReaderPage = (function () {
         if (total >= 2) {
             var curr = this.currentIndex;
             var swapped = (total - curr + 1) % total;
+            this.currentIndex = swapped;
             this.consoleLog += swapped + "<br>";
             this.selectedDevice = this.availableDevices[swapped];
         }
