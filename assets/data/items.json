@@ -1,0 +1,72 @@
+[
+    {
+        "name": "My Wallet",
+        "profilePic": "assets/icon/MyAccount_Icon.png",
+        "about": "Use our safe fund transfer program to pay digitally.",
+        "iconname": "icon-account",
+         "IsVisible": true
+    },
+    {
+        "name": "My Offers",
+        "profilePic": "assets/icon/MyAccount_Icon.png",
+        "about": "My offer.",
+         "IsVisible": true,
+        "iconname": "icon-offer"
+    },
+    {
+        "name": "My Calendar",
+        "profilePic": "assets/icon/Games_Icon.png",
+        "about": "Explore our new collection of games, now in mobile.",
+         "IsVisible": true,
+        "iconname": "icon-calendar"
+    },
+    {
+        "name": "Games",
+        "profilePic": "assets/icon/Games_Icon.png",
+        "about": "Explore our new collection of games, now in mobile.",
+         "IsVisible": true,
+        "iconname": "icon-game"
+    },
+    {
+        "name": "Property Info",
+        "profilePic": "assets/icon/PropertyInfo_Icon.png",
+         "IsVisible": true,
+        "about": "Property Info.",
+        "iconname": "icon-propertyinfo"
+    },
+    {
+        "name": "Game Reserve",
+        "profilePic": "assets/icon/GameReserve_Icon.png",
+        "about": "Browse mobile tournaments",
+        "iconname": "icon-game-reserve",
+        "IsVisible": true
+    },
+    {
+        "name": "Call Attendant",
+        "profilePic": "assets/icon/CallAttendant.png",
+         "IsVisible": true,
+        "about": "Pre-Commitment",
+        "iconname": "icon-callattendant"
+    },
+    {
+        "name": "Beverage",
+        "profilePic": "assets/icon/Beverage_Icon.png",
+        "about": "Call our attendent for any help.",
+         "IsVisible": true,
+        "iconname": "icon-beverage"
+    },
+    {
+        "name": "Wayfinder",
+        "profilePic": "assets/icon/WayFinder_Icon.png",
+         "IsVisible": true,
+        "about": "Property Info.",
+        "iconname": "icon-wayfinder"
+    },
+    {
+        "name": "Test",
+        "profilePic": "assets/icon/WayFinder_Icon.png",
+        "about": "Test Page.",
+        "IsVisible": true,
+        "iconname": "icon-wayfinder"
+    }
+]

@@ -1,0 +1,96 @@
+{
+    "casinoEvents": [
+        {
+            "title": "VEGAS SHINE",
+            "startDate": "2017-07-19T11:00:00",
+            "startTime": "05.30 AM",
+            "img": "assets/img/Incubus.jpg",
+            "description": "The Afer Party Tour",
+            "tRate": "$59.50",
+            "place": "@The Joint at HARD Rock Hotel & Casino"
+        },
+        {
+            "title": "Jeniffer Lopez:All I Have",
+            "startDate": "2017-07-19T11:00:00",
+            "startTime": "06.30 AM",
+            "img": "assets/img/KingsOfLeon.jpg",
+            "description": "Global Superstar Jeniffer Lopez brings her rock-star energy, electrifying dance moves",
+            "tRate": "$59.50",
+            "place": "@The Joint at HARD Rock Hotel & Casino"
+        },
+        {
+            "title": "Backstreet Boys",
+            "startDate": "2017-07-19T11:00:00",
+            "startTime": "09.40 AM",
+            "img": "assets/img/PinkFloyd.jpg",
+            "description": "Backstreet Boys: Larger than life at the AXIS at Planet Hollywood",
+            "tRate": "$59.50",
+            "place": "@The Joint at HARD Rock Hotel & Casino"
+        },
+        {
+            "title": "Pitbull: Time of our lives",
+            "startDate": "2017-07-19T11:00:00",
+            "startTime": "10.30 PM",
+            "img": "assets/img/RKelly.jpg",
+            "description": "Pitbull returns to the AXIS at Planet Hollywood to headline a limited engagement",
+            "tRate": "$59.50",
+            "place": "@The Joint at HARD Rock Hotel & Casino"
+        },
+        {
+            "title": "Ringo Starr & Starr Band",
+            "startDate": "2017-07-19T11:00:00",
+            "startTime": "11.30 PM",
+            "img": "assets/img/Incubus.jpg",
+            "description": "Ringo Starr takes the vegas stage with his longest running All star band",
+            "tRate": "$59.50",
+            "place": "@The Joint at HARD Rock Hotel & Casino"
+        }
+    ],
+    "myCalendarEvents": [
+        {
+            "title": "Jeniffer Lopez:All I Have",
+            "startDate": "2017-07-19T11:00:00",
+            "startTime": "06.30 AM",
+            "img": "assets/img/KingsOfLeon.jpg",
+            "description": "Global Superstar Jeniffer Lopez brings her rock-star energy, electrifying dance moves",
+            "tRate": "$59.50",
+            "place": "@The Joint at HARD Rock Hotel & Casino"
+        },
+        {
+            "title": "VEGAS SHINE",
+            "startDate": "2017-07-19T11:00:00",
+            "startTime": "10.30 AM",
+            "img": "assets/img/Incubus.jpg",
+            "description": "The Afer Party Tour",
+            "tRate": "$59.50",
+            "place": "@The Joint at HARD Rock Hotel & Casino"
+        },
+        {
+            "title": "Backstreet Boys",
+            "startDate": "2017-07-19T11:00:00",
+            "startTime": "11.40 AM",
+            "img": "assets/img/PinkFloyd.jpg",
+            "description": "Backstreet Boys: Larger than life at the AXIS at Planet Hollywood",
+            "tRate": "$59.50",
+            "place": "@The Joint at HARD Rock Hotel & Casino"
+        },
+        {
+            "title": "Pitbull: Time of our lives",
+            "startDate": "2017-07-19T11:00:00",
+            "startTime": "10.30 PM",
+            "img": "assets/img/RKelly.jpg",
+            "description": "Pitbull returns to the AXIS at Planet Hollywood to headline a limited engagement",
+            "tRate": "$59.50",
+            "place": "@The Joint at HARD Rock Hotel & Casino"
+        },
+        {
+            "title": "Ringo Starr & Starr Band",
+            "startDate": "2017-07-19T11:00:00",
+            "startTime": "11.30 PM",
+            "img": "assets/img/Incubus.jpg",
+            "description": "Ringo Starr takes the vegas stage with his longest running All star band",
+            "tRate": "$59.50",
+            "place": "@The Joint at HARD Rock Hotel & Casino"
+        }
+    ]
+}

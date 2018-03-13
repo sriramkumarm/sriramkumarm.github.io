@@ -1,0 +1,50 @@
+{
+    "help_segment":[{
+        "Title":"General",
+        "id":"general"
+        },{
+        "Title":"Slot",
+        "id":"slot"
+        },{
+        "Title":"Casino",
+        "id":"casino"
+        },{
+        "Title":"Account",
+        "id":"account"
+       }],
+       "general_content":[
+            {"quest":"How can I change my password?","ans":"You may change your password online after signing into your account and clicking on Account Information."},
+            {"quest":"I have forgotten my password. How can I retrieve it?","ans":"Simply go online to the Forgot Password section, enter the email address you signed up with and click Continue. Our system will automatically send you an email with instructions on how to retrieve your password. Follow the instructions provided and you’ll be good to go."},
+            {"quest":"When will my Rewards expire?","ans":"Your Rewards are valid through the expiration date on each individual Reward. That means any Rewards you have in your account will remain valid through their expiration date."},
+            {"quest":"What happened to my visit history and will I continue to earn Visits?","ans":"You retained all of your visits. And each time you visit a unique Participating Location and make a Qualifying Purchase, you will earn a new Visit."},
+            {"quest":"Where can I view and track my Points and Rewards?","ans":"Simply sign in to your Membership Account. On the Transactions section, you can view all of your Qualifying Purchase transactions posted to your account. On the Rewards section, you can view and print your Rewards Coupons and Offers."},
+            {"quest":"Why can’t I see my recent transactions on the Transactions page?","ans":"Why can’t I see my recent transactions on the Transactions page?"},
+            {"quest":"How many points do I earn for Hotel stays?","ans":"Members earn 10 Hotel Points for every $1 Qualifying Room Revenue."},
+            {"quest":"How many Hotel Points are required to earn a Hotel Free Night Certificate?","ans":"Click here for details on Hotel Free Night Certificates."},
+            {"quest":"I have my Hotel Free Night Certificate, now what?","ans":"Now you are ready to book your stay at your preferred Hard Rock Hotel! Call the Free Night Reservation Line: 1-844-373-9273  to book your stay and redeem your Certificate."}
+        ],
+        "slot_content":[
+            {"quest":"Do I receive a membership card? ","ans":"We’re digital! Simply present your virtual card through your mobile device by signing in to the Hard Rock Rewards website or by downloading the Hard Rock Rewards App. You can also print a version from the website, if you prefer."},            
+            {"quest":"What is a verified visit?","ans":"A verified visit is defined by a unique visit to a participating location PER DAY. Only verified visits count towards Milestone Rewards."},
+            {"quest":"What are Surprise and Delight Offers?","ans":"From time to time we may send you various Offers for use at participating Hard Rock Cafes. All details of the limited time offer will be specified in the email we send you. Keep an eye on your inbox!"},
+            {"quest":"What is a First Available Priority Seating Rewards Coupon?","ans":"It is a single use only Coupon that allows you to skip to the front of the line to shorten the wait for a table. You must present to Staff (either via printout or mobile device) at any participating Cafe to receive First Available Priority Seating."},
+            {"quest":"How do I earn a First Available Priority Seating Rewards Coupon?","ans":"You earn a Priority Seating Rewards Coupon after every 3rd Verified Visit to a participating Hard Rock Cafe. We will email you when your Reward is available or you can check the Rewards section of your account to see the status of or view and print available Rewards."}
+        ],
+        "casino_content":[
+            {"quest":"Do Hotel Points expire?","ans":"Hotel Points may expire after 24 months of inactivity."},
+            {"quest":"What is the online Visit Map?","ans":"Your personalized Visit Map is where you can track all of the global Hard Rock locations you have visited! Simply sign in to your account and select Visit Map to see all of your tracked visits."},
+            {"quest":"What if I made a Qualifying Purchase at a participating Hard Rock Cafe or Rock Shop before I signed up for Hard Rock Rewards?","ans":"If you have your receipt from a recent transaction made at a participating Hard Rock Cafe or Rock Shop, look for a 15 digit Purchase Code on the receipt. Then, sign in to your account and look for the Request Visit Credit section of the Hard Rock Rewards website."},
+            {"quest":"What is the online Visit Map?","ans":"Your personalized Visit Map is where you can track all of the global Hard Rock locations you have visited! Simply sign in to your account and select Visit Map to see all of your tracked visits."},
+            {"quest":"What is a verified visit?","ans":"A verified visit is defined by a unique visit to a participating location PER DAY. Only verified visits count towards Milestone Rewards"},
+            {"quest":"Do I earn points for Hard Rock Cafe purchases?","ans":"No, there are no points for tracked Cafe purchases. You will earn a Verified Visit Credit for each unique visit to a Hard Rock Cafe location as well as the opportunity for Surprise & Delight offers."},
+            {"quest":"What are Surprise and Delight Offers?","ans":"From time to time we may send you various Offers for use at participating Hard Rock Cafes. All details of the limited time offer will be specified in the email we send you. Keep an eye on your inbox!"},
+            {"quest":"How do I know if I have a Surprise and Delight Offer?","ans":"All offers will be emailed to you. You will receive an email notifying you when you have an Offer or Reward and you will also see it on the Rewards section of the Hard Rock Rewards website."},
+            {"quest":"What do I need to do to ensure that I earn Hotel Points whenever I stay at your Hotels?","ans":"Look for the dedicated Hard Rock Rewards check-in area at the front desk. You must always present your Hard Rock Rewards Rewards ID number upon check-in and again during checkout."},
+            {"quest":"What types of Room Rates are not considered Qualifying?","ans":"If your was booked through a tour operator, online travel channel or other third party channel including, at a group rate as part of an event, meeting conference or organized tour, at a tour operator, wholesaler, or crew room rate, at a business, employee or friends and family rate, or the guest room was provided complimentary, it is not considered Qualifying. "}
+        ],
+        "account_content":[
+            {"quest":"Can I have more than one person on my Rewards Account?","ans":"No, the membership is for individual use only. However, you can encourage your friends and family members to join too! Any points or rewards earned are non-transferrable."},
+            {"quest":"How do I update my email, account information and/or communication preferences?","ans":"Sign in to your account and make your changes in the Account Information or Communication section."}
+        ]
+
+}

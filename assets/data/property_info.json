@@ -1,0 +1,26 @@
+{
+    "slidesData" : [
+      {
+        "id": "first",
+        "title": "CASINO & GAMING",
+        "content":  [{ "imgSrc": "assets/img/slotGames.jpg" ,"title":"Slot Games"},
+        { "imgSrc": "assets/img/exclusiveLounge.jpg" ,"title":"Exclusive Lounge"},
+        { "imgSrc": "assets/img/playersClub.jpg" ,"title":"Players Club"},
+        { "imgSrc": "assets/img/tableGames.jpg" ,"title":"Table Games"},
+        { "imgSrc": "assets/img/tournaments.jpg" ,"title":"Tournaments"}]
+      },
+      {
+        "id": "second",
+        "title": "DINNING & LIGHT NIFE",
+        "content": [{ "imgSrc": "assets/img/breathe.jpg","title":"Breathe" },
+        { "imgSrc": "assets/img/centerBar.jpg","title":"Center Bar" },
+        { "imgSrc": "assets/img/vanity.jpg","title":"Vanity" }]
+      },
+      {
+        "id": "third",
+        "title": "ROOMS & SUITS",
+        "content": [{ "imgSrc": "assets/img/room_royal_tower.jpg","title":"Royal" },
+        { "imgSrc": "assets/img/room_platinum_tower.jpg","title":"Platinum" }]
+      }
+    ]
+}

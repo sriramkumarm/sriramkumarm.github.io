@@ -1,0 +1,173 @@
+{ 
+  "game_tabs":[{
+    "title":"Our Picks For You",
+    "root":"tab1Root",
+    "id":"ourpicks"
+  },{
+    "title":"Trending Games",
+    "root":"tab2Root",
+    "id":"trends"
+  },{
+    "title":"New Releases",
+    "root":"tab3Root",
+    "id":"new"
+  }],
+  "game_slides":[{
+      "title":"Kim",
+      "src":"assets/img/kim_cover.jpg",
+      "category":"ourpicks",
+      "action":"onKimKardshianGameClick()"
+    },{
+      "title":"LEGEND OF PHARAOHS",
+      "src":"assets/img/LegendofPharaohs_Large.jpg",
+      "category":"ourpicks",
+      "action":""
+    },{
+      "title":"BUBBLE BURST",
+      "src":"assets/img/BubbleBurst_Large.jpg",
+      "category":"ourpicks",
+      "action":""
+    },{
+      "title":"CASH SPIN",
+      "src":"assets/img/TrendingGames/CashSpin.png",
+      "category":"trends",
+      "action":""
+    },{
+      "title":"CASH WIZARD",
+      "src":"assets/img/TrendingGames/CashWizard.png",
+      "category":"trends",
+      "action":""
+    },{
+      "title":"KING OF POP",
+      "src":"assets/img/TrendingGames/KingOfPop.png",
+      "category":"trends",
+      "action":""
+    },{
+      "title":"BOULDER BUCKS",
+      "src":"assets/img/NewReleases/BoulderBucks.png",
+      "category":"new",
+      "action":""
+    },{
+      "title":"BARKIN MAD",
+      "src":"assets/img/NewReleases/BarkinMad.png",
+      "category":"new",
+      "action":""
+    },{
+      "title":"CROWN GEMS",
+      "src":"assets/img/NewReleases/CrownGems.png",
+      "category":"new",
+      "action":""
+    }],
+  "game_tiles": [{
+      "title":"Kim",
+      "src":"assets/img/kim_cover.jpg",
+      "category":"ourpicks",
+      "action":"onKimKardshianGameClick();"
+    },{
+      "title":"LEGEND OF PHARAOHS",
+      "src":"assets/img/LegendofPharaohs_Large.jpg",
+      "category":"ourpicks",
+      "action":""
+    },{
+      "title":"BUBBLE BURST",
+      "src":"assets/img/BubbleBurst_Large.jpg",
+      "category":"ourpicks",
+      "action":""
+    },{
+      "title":"DARTIT",
+      "src":"assets/img/Dartit_Large.jpg",
+      "category":"ourpicks",
+      "action":""
+    },{
+      "title":"DRAGON SPIN",
+      "src":"assets/img/DragonSpin_Large.jpg",
+      "category":"ourpicks",
+      "action":""
+    },{
+      "title":"CASH STAX",
+      "src":"assets/img/CashStax_Large.jpg",
+      "category":"ourpicks",
+      "action":""
+    },{
+      "title":"RED HOTWILD",
+      "src":"assets/img/RedHotWild_Large.jpg",
+      "category":"ourpicks",
+      "action":""
+    },{
+      "title":"DICE FRENZY",
+      "src":"assets/img/DiceFrenzy_Large.jpg",
+      "category":"ourpicks",
+      "action":""
+    },{
+      "title":"CASH SPIN",
+      "src":"assets/img/TrendingGames/CashSpin.png",
+      "category":"trends",
+      "action":""
+    },{
+      "title":"KING OF POP",
+      "src":"assets/img/TrendingGames/KingOfPop.png",
+      "category":"trends",
+      "action":""
+    },{
+      "title":"ELVIS",
+      "src":"assets/img/TrendingGames/Elvis.png",
+      "category":"trends",
+      "action":""
+    },{
+      "title":"LIL RED",
+      "src":"assets/img/TrendingGames/LilRed.png",
+      "category":"trends",
+      "action":""
+    },{
+      "title":"RAGING RHINO",
+      "src":"assets/img/TrendingGames/RagingRhino.png",
+      "category":"trends",
+      "action":""
+    },{
+      "title":"TOP SPOT",
+      "src":"assets/img/TrendingGames/TopSpot.png",
+      "category":"trends",
+      "action":""
+    },{
+      "title":"CASH WIZARD",
+      "src":"assets/img/TrendingGames/CashWizard.png",
+      "category":"trends",
+      "action":""
+    },{
+      "title":"BOULDER BUCKS",
+      "src":"assets/img/NewReleases/BoulderBucks.png",
+      "category":"new",
+      "action":""
+    },{
+      "title":"ROBINHOOD",
+      "src":"assets/img/NewReleases/RobinHood.png",
+      "category":"new",
+      "action":""
+    },{
+      "title":"NEMOS VOYAGE",
+      "src":"assets/img/NewReleases/NemosVoyage.png",
+      "category":"new",
+      "action":""
+    },{
+      "title":"LUCKY TREE",
+      "src":"assets/img/NewReleases/LuckyTree.png",
+      "category":"new",
+      "action":""
+    },{
+      "title":"FORBIDDEN DRAGON",
+      "src":"assets/img/NewReleases/ForbiddenDragon.png",
+      "category":"new",
+      "action":""
+    },{
+      "title":"CROWN GEMS",
+      "src":"assets/img/NewReleases/CrownGems.png",
+      "category":"new",
+      "action":""
+    },{
+      "title":"BARKIN MAD",
+      "src":"assets/img/NewReleases/BarkinMad.png",
+      "category":"new",
+      "action":""
+    }
+    ]  
+}
