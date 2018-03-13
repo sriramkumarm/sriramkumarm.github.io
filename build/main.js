@@ -135,6 +135,7 @@ var QrCodeReaderPage = (function () {
         this.camStarted = false;
         this.availableDevices = [];
         this.consoleLog = "";
+        this.currentIndex = 0;
     }
     QrCodeReaderPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad QrCodeReaderPage');
@@ -147,6 +148,7 @@ var QrCodeReaderPage = (function () {
             cameras.forEach(function (element) {
                 _this.consoleLog += element.deviceId + " - " + element.label + "<br>";
             });
+            this.currentIndex = 0;
             this.availableDevices = cameras;
             this.selectedDevice = cameras[0];
             this.camStarted = true;
@@ -157,18 +159,27 @@ var QrCodeReaderPage = (function () {
     };
     QrCodeReaderPage.prototype.handleQrCodeResult = function (result) {
         if (result) {
-            this.consoleLog += "<br>" + result;
+            this.consoleLog += result + "<br>";
             alert(result);
         }
     };
     QrCodeReaderPage.prototype.onChange = function (device) {
-        this.consoleLog += "<br>" + device.label;
+        this.consoleLog += device.label + "<br>";
         this.selectedDevice = device;
         this.camStarted = true;
     };
+    QrCodeReaderPage.prototype.swap = function () {
+        var total = this.availableDevices.length;
+        if (total >= 2) {
+            var curr = this.currentIndex;
+            var swapped = (total - curr) % total;
+            this.consoleLog += swapped + "<br>";
+            this.selectedDevice = this.availableDevices[swapped];
+        }
+    };
     QrCodeReaderPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-qr-code-reader',template:/*ion-inline-start:"D:\My Ionic Projects\MobileConciergePWA\src\pages\qr-code-reader\qr-code-reader.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>QrCodeReader</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content>\n  <div class="absolute-box">\n    <ion-grid>\n      <ion-row>\n        <ion-col *ngFor="let device of availableDevices">\n          <button ion-button small (click)="onChange(device)">{{ device.label }}</button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n    <small [innerHTML]="consoleLog"></small>\n    <!-- <select style="float: right;" [(ngModel)]="selectedDevice" (change)="onChange($event.target.value)">\n        <option *ngFor="let device of availableDevices" [ngValue]="device">{{ device.label }}</option>\n      </select> -->\n  </div>\n  <div class="absolute-focus">&nbsp;</div>\n  <ngx-zxing [device]="selectedDevice" cssClass="small-video" (camerasFound)="displayCameras($event)" (scanSuccess)="handleQrCodeResult($event)"></ngx-zxing>\n\n</ion-content>'/*ion-inline-end:"D:\My Ionic Projects\MobileConciergePWA\src\pages\qr-code-reader\qr-code-reader.html"*/,
+            selector: 'page-qr-code-reader',template:/*ion-inline-start:"D:\My Ionic Projects\MobileConciergePWA\src\pages\qr-code-reader\qr-code-reader.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>QrCodeReader</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content>\n  <div class="absolute-box">\n    <button ion-button small (click)="swap()">Swap</button>\n    <small [innerHTML]="consoleLog"></small>\n    <!-- <select style="float: right;" [(ngModel)]="selectedDevice" (change)="onChange($event.target.value)">\n        <option *ngFor="let device of availableDevices" [ngValue]="device">{{ device.label }}</option>\n      </select> -->\n  </div>\n  <div class="absolute-focus">&nbsp;</div>\n  <ngx-zxing [device]="selectedDevice" cssClass="small-video" (camerasFound)="displayCameras($event)" (scanSuccess)="handleQrCodeResult($event)"></ngx-zxing>\n\n</ion-content>'/*ion-inline-end:"D:\My Ionic Projects\MobileConciergePWA\src\pages\qr-code-reader\qr-code-reader.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], QrCodeReaderPage);
