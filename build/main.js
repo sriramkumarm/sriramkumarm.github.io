@@ -143,15 +143,16 @@ var QrCodeReaderPage = (function () {
         var _this = this;
         debugger;
         if (cameras && cameras.length) {
+            this.consoleLog += "Available Options" + "<br>";
             cameras.forEach(function (element) {
-                _this.consoleLog += "<br>" + element.deviceId + " - " + element.label;
+                _this.consoleLog += element.deviceId + " - " + element.label + "<br>";
             });
             this.availableDevices = cameras;
             this.selectedDevice = cameras[0];
             this.camStarted = true;
         }
         else {
-            this.consoleLog += "<br>" + "No Cameras";
+            this.consoleLog += "No Cameras" + "<br>";
         }
     };
     QrCodeReaderPage.prototype.handleQrCodeResult = function (result) {
@@ -167,7 +168,7 @@ var QrCodeReaderPage = (function () {
     };
     QrCodeReaderPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-qr-code-reader',template:/*ion-inline-start:"D:\My Ionic Projects\MobileConciergePWA\src\pages\qr-code-reader\qr-code-reader.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>QrCodeReader</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <h4>{{ consoleLog }}</h4>\n  <select [(ngModel)]="selectedDevice" (change)="onChange($event.target.value)">\n    <option *ngFor="let device of availableDevices" [ngValue]="device">{{ device.label }}</option>\n  </select>\n  <!-- <ion-select *ngIf="availableDevices.length" (ionChange)="onChange($event.target.value)" [(ngModel)]="selectedDevice">\n    <ion-option *ngFor="let d of availableDevices" [value]="device.deviceId">\n      {{device.label}}\n    </ion-option>\n  </ion-select> -->\n  <ngx-zxing [device]="selectedDevice" [cssClass]="\'small-video\'" (camerasFound)="displayCameras($event)" (scanSuccess)="handleQrCodeResult($event)"></ngx-zxing>\n  <!-- <ngx-zxing></ngx-zxing> -->\n</ion-content>'/*ion-inline-end:"D:\My Ionic Projects\MobileConciergePWA\src\pages\qr-code-reader\qr-code-reader.html"*/,
+            selector: 'page-qr-code-reader',template:/*ion-inline-start:"D:\My Ionic Projects\MobileConciergePWA\src\pages\qr-code-reader\qr-code-reader.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>QrCodeReader</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content>\n  <div class="absolute-box">\n    <small [innerHTML]="consoleLog"></small>\n    <select style="float: right;" [(ngModel)]="selectedDevice" (change)="onChange($event.target.value)">\n        <option *ngFor="let device of availableDevices" [ngValue]="device">{{ device.label }}</option>\n      </select>\n  </div>\n  <div class="absolute-focus">&nbsp;</div>\n  <ngx-zxing [device]="selectedDevice" cssClass="small-video" (camerasFound)="displayCameras($event)" (scanSuccess)="handleQrCodeResult($event)"></ngx-zxing>\n\n</ion-content>'/*ion-inline-end:"D:\My Ionic Projects\MobileConciergePWA\src\pages\qr-code-reader\qr-code-reader.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], QrCodeReaderPage);

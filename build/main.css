@@ -31562,8 +31562,37 @@ page-items .swiper-slide img {
 }
 
 page-qr-code-reader .small-video {
-  max-height: 500px;
-  width: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+page-qr-code-reader .absolute-box {
+  position: absolute;
+  top: 0;
+  float: left;
+  z-index: 100;
+  padding: 10px;
+}
+
+page-qr-code-reader .absolute-focus {
+  position: absolute;
+  top: 37%;
+  left: 37%;
+  border: 5px solid green;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+}
+
+page-qr-code-reader .middle {
+  vertical-align: middle;
+  text-align: center;
+  left: 10%;
+  position: relative;
+  /*makes left effective*/
+  display: table-cell;
 }
