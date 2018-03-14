@@ -232,7 +232,7 @@ var BluetoothConnectPage = (function () {
         this.bleConnect.findNearbyDevices()
             .then(function (device) {
             _this.info += "<br>" + "Device Name: " + device.name + " Id: " + device.id + " Uuids: " + device.uuids.join(",");
-            alert(device);
+            alert("Device Name: " + device.name);
         })
             .catch(function (err) {
             _this.info += "<br>" + err;
