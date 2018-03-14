@@ -40,8 +40,9 @@ webpackEmptyAsyncContext.id = 168;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__qr_code_reader_qr_code_reader__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__bluetooth_connect_bluetooth_connect__ = __webpack_require__(210);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -51,6 +52,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -93,12 +95,15 @@ var ItemsPage = (function () {
     ItemsPage.prototype.openQr = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__qr_code_reader_qr_code_reader__["a" /* QrCodeReaderPage */]);
     };
+    ItemsPage.prototype.openBle = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__bluetooth_connect_bluetooth_connect__["a" /* BluetoothConnectPage */]);
+    };
     ItemsPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ItemsPage');
     };
     ItemsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-items',template:/*ion-inline-start:"D:\My Ionic Projects\MobileConciergePWA\src\pages\items\items.html"*/'<ion-header>\n  <ion-toolbar>\n    <button menuToggle ion-button icon-only left>\n          <ion-icon name=\'menu\'></ion-icon>\n      </button>\n    <ion-title text-center> <img src="assets/img/dark/HardRockLogo.png" class="title-image" /> </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content class="home-page" no-scroll>\n  <ion-slides pager class="dashboard_slider" autoplay="4000" loop="true" speed="1000">\n    <ion-slide *ngFor="let slide of slidesImage">\n      <img [src]="slide.image" class="slide-image" />\n      <p>{{ slide.image }} </p>\n    </ion-slide>\n  </ion-slides>\n  <ion-grid class="container_help text-uppercase">\n    <ion-row>\n      <ion-col col-3 class="bg-gray cardin-status">\n        <div class="text-gray2">Status</div>\n        <span class="cardin" [ngClass]="{\'active\': true }"></span>\n        <span>{{(true)?"Online":"Offline"}}</span>\n      </ion-col>\n      <ion-col col-9 class="quick-connect">\n        <card-in-out></card-in-out>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col>\n          <button ion-button (click)="openQr()">Open QR</button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <ion-grid class="carded-dtls" no-padding>\n    <ion-row>\n      <ion-col>\n        <div class="walletimg_bg">\n          <ion-grid class="membership">\n            <ion-row>\n              <ion-col class="name-on-card">{{ (currentUser?.first_name) ? currentUser?.first_name : "Guest" }}</ion-col>\n            </ion-row>\n            <ion-row class="card-number">\n              <ion-col text-right><strong>0000012345</strong></ion-col>\n            </ion-row>\n            <ion-row>\n              <ion-col class="text-uppercase card-copyrights" text-right>&copy; 2017, Casino6601 International, Inc.</ion-col>\n            </ion-row>\n          </ion-grid>\n        </div>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <ion-grid class="dashboard_grid">\n    <ion-row class="account-info-container">\n      <ion-col col-4>\n        <div class="account-info text-uppercase">\n          <span class="text-gray2">Cash</span>\n          <p no-margin>{{ walletCash?.FormattedAmount }}</p>\n        </div>\n      </ion-col>\n      <ion-col col-4>\n        <div class="account-info text-uppercase divider">\n          <span class="text-gray2">Points</span>\n          <p no-margin>{{ walletPoints?.Amount }}</p>\n        </div>\n      </ion-col>\n      <ion-col col-4>\n        <div class="account-info text-uppercase">\n          <span class="text-gray2">Promo</span>\n          <p no-margin>{{ walletPromo?.FormattedAmount }}</p>\n        </div>\n      </ion-col>\n    </ion-row>\n\n    <ion-row>\n      <ion-col class="tiles activity-tiles">\n        <img src="assets/img/bubble-burst.png" />\n        <h6>{{ bubbleBurstOffer?.QualificationRatio }}% Completed</h6>\n        <div class="progress">\n          <div class="progress-bar" role="progressbar" [style.width]="bubbleBurstOffer?.QualificationRatio+\'%\'"></div>\n        </div>\n      </ion-col>\n      <ion-col class="tiles activity-tiles">\n        <img src="assets/img/HalloweenPrizeHarvest.png" />\n        <h6> {{ rewardsQuestOffer?.completedNodes }}/{{rewardsQuestOffer?.totalNodes }} Completed</h6>\n        <div class="progress">\n          <div class="progress-bar" role="progressbar" [style.width]="rewardsQuestOffer?.QualificationRatio+\'%\'"></div>\n        </div>\n      </ion-col>\n    </ion-row>\n    <!-- <ion-row *ngFor="let item of currentItems | chunk:3; let i = index"> -->\n    <ion-row *ngFor="let item of currentItems; let i = index">\n      <ng-container *ngFor="let card of item; let j = index">\n        <ion-col class="tiles">\n          <button (click)="openItem(card)" *ngIf="!card.empty" class="button button-icon">\n                  <i class="material-icons md-icon">{{card.cssClass}}</i>\n                  <h6>{{card.name}}</h6>\n                  </button>\n        </ion-col>\n      </ng-container>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"D:\My Ionic Projects\MobileConciergePWA\src\pages\items\items.html"*/,
+            selector: 'page-items',template:/*ion-inline-start:"D:\My Ionic Projects\MobileConciergePWA\src\pages\items\items.html"*/'<ion-header>\n  <ion-toolbar>\n    <button menuToggle ion-button icon-only left>\n          <ion-icon name=\'menu\'></ion-icon>\n      </button>\n    <ion-title text-center> <img src="assets/img/dark/HardRockLogo.png" class="title-image" /> </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content class="home-page" no-scroll>\n  <ion-slides pager class="dashboard_slider" autoplay="4000" loop="true" speed="1000">\n    <ion-slide *ngFor="let slide of slidesImage">\n      <img [src]="slide.image" class="slide-image" />\n      <p>{{ slide.image }} </p>\n    </ion-slide>\n  </ion-slides>\n  <ion-grid class="container_help text-uppercase">\n    <ion-row>\n      <ion-col col-3 class="bg-gray cardin-status">\n        <div class="text-gray2">Status</div>\n        <span class="cardin" [ngClass]="{\'active\': true }"></span>\n        <span>{{(true)?"Online":"Offline"}}</span>\n      </ion-col>\n      <ion-col col-9 class="quick-connect">\n        <card-in-out></card-in-out>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col>\n          <button ion-button (click)="openQr()">Open QR</button>\n      </ion-col>\n      <ion-col>\n          <button ion-button (click)="openBle()">Open BLE</button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <ion-grid class="carded-dtls" no-padding>\n    <ion-row>\n      <ion-col>\n        <div class="walletimg_bg">\n          <ion-grid class="membership">\n            <ion-row>\n              <ion-col class="name-on-card">{{ (currentUser?.first_name) ? currentUser?.first_name : "Guest" }}</ion-col>\n            </ion-row>\n            <ion-row class="card-number">\n              <ion-col text-right><strong>0000012345</strong></ion-col>\n            </ion-row>\n            <ion-row>\n              <ion-col class="text-uppercase card-copyrights" text-right>&copy; 2017, Casino6601 International, Inc.</ion-col>\n            </ion-row>\n          </ion-grid>\n        </div>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <ion-grid class="dashboard_grid">\n    <ion-row class="account-info-container">\n      <ion-col col-4>\n        <div class="account-info text-uppercase">\n          <span class="text-gray2">Cash</span>\n          <p no-margin>{{ walletCash?.FormattedAmount }}</p>\n        </div>\n      </ion-col>\n      <ion-col col-4>\n        <div class="account-info text-uppercase divider">\n          <span class="text-gray2">Points</span>\n          <p no-margin>{{ walletPoints?.Amount }}</p>\n        </div>\n      </ion-col>\n      <ion-col col-4>\n        <div class="account-info text-uppercase">\n          <span class="text-gray2">Promo</span>\n          <p no-margin>{{ walletPromo?.FormattedAmount }}</p>\n        </div>\n      </ion-col>\n    </ion-row>\n\n    <ion-row>\n      <ion-col class="tiles activity-tiles">\n        <img src="assets/img/bubble-burst.png" />\n        <h6>{{ bubbleBurstOffer?.QualificationRatio }}% Completed</h6>\n        <div class="progress">\n          <div class="progress-bar" role="progressbar" [style.width]="bubbleBurstOffer?.QualificationRatio+\'%\'"></div>\n        </div>\n      </ion-col>\n      <ion-col class="tiles activity-tiles">\n        <img src="assets/img/HalloweenPrizeHarvest.png" />\n        <h6> {{ rewardsQuestOffer?.completedNodes }}/{{rewardsQuestOffer?.totalNodes }} Completed</h6>\n        <div class="progress">\n          <div class="progress-bar" role="progressbar" [style.width]="rewardsQuestOffer?.QualificationRatio+\'%\'"></div>\n        </div>\n      </ion-col>\n    </ion-row>\n    <!-- <ion-row *ngFor="let item of currentItems | chunk:3; let i = index"> -->\n    <ion-row *ngFor="let item of currentItems; let i = index">\n      <ng-container *ngFor="let card of item; let j = index">\n        <ion-col class="tiles">\n          <button (click)="openItem(card)" *ngIf="!card.empty" class="button button-icon">\n                  <i class="material-icons md-icon">{{card.cssClass}}</i>\n                  <h6>{{card.name}}</h6>\n                  </button>\n        </ion-col>\n      </ng-container>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"D:\My Ionic Projects\MobileConciergePWA\src\pages\items\items.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
     ], ItemsPage);
@@ -115,7 +120,7 @@ var ItemsPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QrCodeReaderPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -191,13 +196,110 @@ var QrCodeReaderPage = (function () {
 
 /***/ }),
 
-/***/ 236:
+/***/ 210:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BluetoothConnectPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_ble_connectivity_ble_connectivity__ = __webpack_require__(211);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+// import { BluetoothCore } from '@manekinekko/angular-web-bluetooth'
+var BluetoothConnectPage = (function () {
+    function BluetoothConnectPage(navCtrl, navParams, bleConnect) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.bleConnect = bleConnect;
+        this.devices = "Devices";
+    }
+    BluetoothConnectPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad BluetoothConnectPage');
+    };
+    BluetoothConnectPage.prototype.startScan = function () {
+        var _this = this;
+        this.bleConnect.findNearbyDevices()
+            .then(function (devices) {
+            _this.devices += JSON.stringify(devices);
+            alert(devices);
+        })
+            .catch(function (err) {
+            _this.devices += err;
+        });
+    };
+    BluetoothConnectPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-bluetooth-connect',template:/*ion-inline-start:"D:\My Ionic Projects\MobileConciergePWA\src\pages\bluetooth-connect\bluetooth-connect.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>BluetoothConnect</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <button ion-button block (click)="startScan()">Scan for Devices</button>\n  <div>\n    <span>{{ devices }}</span>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\My Ionic Projects\MobileConciergePWA\src\pages\bluetooth-connect\bluetooth-connect.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_ble_connectivity_ble_connectivity__["a" /* BleConnectivityProvider */]])
+    ], BluetoothConnectPage);
+    return BluetoothConnectPage;
+}());
+
+//# sourceMappingURL=bluetooth-connect.js.map
+
+/***/ }),
+
+/***/ 211:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BleConnectivityProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var BleConnectivityProvider = (function () {
+    function BleConnectivityProvider() {
+    }
+    BleConnectivityProvider.prototype.findNearbyDevices = function () {
+        if (navigator.bluetooth) {
+            return navigator.bluetooth.requestDevice({
+                acceptAllDevices: true,
+                optionalServices: ['battery_service']
+            });
+        }
+        return Promise.reject("Bluetooth is Not Available");
+    };
+    BleConnectivityProvider.prototype.connectToDevice = function (device) {
+        return device.gatt.connect();
+    };
+    BleConnectivityProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], BleConnectivityProvider);
+    return BleConnectivityProvider;
+}());
+
+//# sourceMappingURL=ble-connectivity.js.map
+
+/***/ }),
+
+/***/ 238:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(237);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(239);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(263);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -205,21 +307,23 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 261:
+/***/ 263:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(304);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(307);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_items_items__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_card_in_out_card_in_out__ = __webpack_require__(306);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pipes_chunk_chunk__ = __webpack_require__(307);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__zxing_ngx_scanner__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_card_in_out_card_in_out__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pipes_chunk_chunk__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__zxing_ngx_scanner__ = __webpack_require__(310);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_qr_code_reader_qr_code_reader__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_ble_connectivity_ble_connectivity__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_bluetooth_connect_bluetooth_connect__ = __webpack_require__(210);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -236,6 +340,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+// import { WebBluetoothModule } from '@manekinekko/angular-web-bluetooth';
+
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -247,14 +354,15 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__pages_items_items__["a" /* ItemsPage */],
                 __WEBPACK_IMPORTED_MODULE_6__components_card_in_out_card_in_out__["a" /* CardInOutComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__pipes_chunk_chunk__["a" /* ChunkPipe */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_qr_code_reader_qr_code_reader__["a" /* QrCodeReaderPage */]
+                __WEBPACK_IMPORTED_MODULE_9__pages_qr_code_reader_qr_code_reader__["a" /* QrCodeReaderPage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_bluetooth_connect_bluetooth_connect__["a" /* BluetoothConnectPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: []
                 }),
-                __WEBPACK_IMPORTED_MODULE_8__zxing_ngx_scanner__["a" /* NgxZxingModule */].forRoot()
+                __WEBPACK_IMPORTED_MODULE_8__zxing_ngx_scanner__["a" /* NgxZxingModule */].forRoot(),
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
             entryComponents: [
@@ -262,10 +370,12 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_items_items__["a" /* ItemsPage */],
                 __WEBPACK_IMPORTED_MODULE_6__components_card_in_out_card_in_out__["a" /* CardInOutComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_qr_code_reader_qr_code_reader__["a" /* QrCodeReaderPage */]
+                __WEBPACK_IMPORTED_MODULE_9__pages_qr_code_reader_qr_code_reader__["a" /* QrCodeReaderPage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_bluetooth_connect_bluetooth_connect__["a" /* BluetoothConnectPage */]
             ],
             providers: [
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_10__providers_ble_connectivity_ble_connectivity__["a" /* BleConnectivityProvider */]
             ]
         })
     ], AppModule);
@@ -276,7 +386,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 304:
+/***/ 306:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -324,13 +434,13 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 305:
+/***/ 307:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -359,7 +469,7 @@ var HomePage = (function () {
 
 /***/ }),
 
-/***/ 306:
+/***/ 308:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -399,7 +509,7 @@ var CardInOutComponent = (function () {
 
 /***/ }),
 
-/***/ 307:
+/***/ 309:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -447,5 +557,5 @@ var ChunkPipe = (function () {
 
 /***/ })
 
-},[236]);
+},[238]);
 //# sourceMappingURL=main.js.map
