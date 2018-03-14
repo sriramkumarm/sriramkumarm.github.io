@@ -222,7 +222,7 @@ var BluetoothConnectPage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.bleConnect = bleConnect;
-        this.devices = "Devices";
+        this.info = "Log: ";
     }
     BluetoothConnectPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad BluetoothConnectPage');
@@ -230,17 +230,17 @@ var BluetoothConnectPage = (function () {
     BluetoothConnectPage.prototype.startScan = function () {
         var _this = this;
         this.bleConnect.findNearbyDevices()
-            .then(function (devices) {
-            _this.devices += JSON.stringify(devices);
-            alert(devices);
+            .then(function (device) {
+            _this.info += "<br>" + JSON.stringify(device);
+            alert(device);
         })
             .catch(function (err) {
-            _this.devices += err;
+            _this.info += "<br>" + err;
         });
     };
     BluetoothConnectPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-bluetooth-connect',template:/*ion-inline-start:"D:\My Ionic Projects\MobileConciergePWA\src\pages\bluetooth-connect\bluetooth-connect.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>BluetoothConnect</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <button ion-button block (click)="startScan()">Scan for Devices</button>\n  <div>\n    <span>{{ devices }}</span>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\My Ionic Projects\MobileConciergePWA\src\pages\bluetooth-connect\bluetooth-connect.html"*/,
+            selector: 'page-bluetooth-connect',template:/*ion-inline-start:"D:\My Ionic Projects\MobileConciergePWA\src\pages\bluetooth-connect\bluetooth-connect.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>BluetoothConnect</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <button ion-button block (click)="startScan()">Scan for Devices</button>\n  <div>\n    <span [innerHTML]="info"></span>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\My Ionic Projects\MobileConciergePWA\src\pages\bluetooth-connect\bluetooth-connect.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_ble_connectivity_ble_connectivity__["a" /* BleConnectivityProvider */]])
     ], BluetoothConnectPage);
@@ -289,6 +289,8 @@ var BleConnectivityProvider = (function () {
     return BleConnectivityProvider;
 }());
 
+;
+;
 //# sourceMappingURL=ble-connectivity.js.map
 
 /***/ }),
